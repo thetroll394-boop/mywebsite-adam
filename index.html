@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adam - Website Minimal Modern</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Menu Button -->
+    <div id="menu-btn">☰</div>
+
+    <!-- Sidebar Navigation -->
+    <div id="sidebar">
+        <div class="sidebar-header">Menu</div>
+        <button id="home-btn" class="sidebar-btn">🏠 Home</button>
+        <button id="lirik-btn" class="sidebar-btn">🎵 Lirik Lagu</button>
+        <button id="focus-btn" class="sidebar-btn focus-btn-style">🎨 Nikmati Background</button>
+    </div>
+
+    <div id="overlay"></div>
+
+    <!-- PAGE HOME -->
+    <div id="home" class="page active">
+        <div class="content-wrapper">
+            <h1 class="main-title">Website Minimal Modern</h1>
+
+            <!-- Section: Pembuat -->
+            <div class="section">
+                <h3>Tentang Pembuat</h3>
+                <div class="creator-buttons">
+                    <button id="creator-btn" class="btn btn-primary">Lihat Pembuat Website</button>
+                    <button id="enemy-btn" class="btn btn-danger">⚔️ Musuh Pembuat</button>
+                </div>
+                <p id="creator-name" class="creator-text hidden"><span id="display-name">👤 Adam Ganteng</span></p>
+                <p id="enemy-name" class="enemy-text hidden">😈 Cocobain si mulut panjang</p>
+            </div>
+
+            <!-- Section: Calculator -->
+            <div class="section">
+                <h3>Kalkulator</h3>
+                <div class="calculator">
+                    <input type="text" id="display" placeholder="0" readonly>
+                    <div class="buttons">
+                        <button class="btn-calc">7</button>
+                        <button class="btn-calc">8</button>
+                        <button class="btn-calc">9</button>
+                        <button class="btn-calc operator">/</button>
+                        
+                        <button class="btn-calc">4</button>
+                        <button class="btn-calc">5</button>
+                        <button class="btn-calc">6</button>
+                        <button class="btn-calc operator">*</button>
+                        
+                        <button class="btn-calc">1</button>
+                        <button class="btn-calc">2</button>
+                        <button class="btn-calc">3</button>
+                        <button class="btn-calc operator">-</button>
+                        
+                        <button class="btn-calc">0</button>
+                        <button class="btn-calc clear-btn">C</button>
+                        <button class="btn-calc equals-btn">=</button>
+                        <button class="btn-calc operator">+</button>
+                    </div>
+                    <div class="history">
+                        <h4>📝 Riwayat</h4>
+                        <ul id="history-list"></ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section: Kerang Ajaib -->
+            <div class="section">
+                <h3>🐚 Kerang Ajaib</h3>
+                <p class="question-text">Apakah kamu gay?</p>
+                <button id="kerang-btn" class="btn btn-secondary">Tanya Kerang</button>
+                <p id="kerang-jawab" class="magic-answer"></p>
+            </div>
+
+            <!-- Section: Theme Customizer -->
+            <div class="section">
+                <h3>🎨 Customizer Tema</h3>
+                <p class="question-text">Pilih warna favorit Anda</p>
+                <div class="theme-customizer">
+                    <div class="color-picker-group">
+                        <label for="primary-color">Warna Utama:</label>
+                        <input type="color" id="primary-color" value="#00d4ff">
+                    </div>
+                    <div class="color-picker-group">
+                        <label for="accent-color">Warna Accent:</label>
+                        <input type="color" id="accent-color" value="#ff006e">
+                    </div>
+                    <div class="color-picker-group">
+                        <label for="bg-color">Warna Background:</label>
+                        <input type="color" id="bg-color" value="#0a0a0a">
+                    </div>
+                    <button id="reset-theme-btn" class="btn btn-secondary">Reset Tema</button>
+                </div>
+            </div>
+
+            <!-- Section: Rock Paper Scissors Game -->
+            <div class="section">
+                <h3>🎮 Rock Paper Scissors</h3>
+                <p class="question-text">Bermain melawan AI</p>
+                <div class="game-container">
+                    <div class="game-stats">
+                        <div class="stat-box">
+                            <p class="stat-label">Kemenangan Anda</p>
+                            <p id="user-wins" class="stat-value">0</p>
+                        </div>
+                        <div class="stat-box">
+                            <p class="stat-label">Kemenangan AI</p>
+                            <p id="ai-wins" class="stat-value">0</p>
+                        </div>
+                    </div>
+                    <div class="game-buttons">
+                        <button class="rps-btn" data-choice="rock">🪨 Batu</button>
+                        <button class="rps-btn" data-choice="paper">📄 Kertas</button>
+                        <button class="rps-btn" data-choice="scissors">✂️ Gunting</button>
+                    </div>
+                    <p id="game-result" class="game-result"></p>
+                    <button id="reset-game-btn" class="btn btn-secondary">Reset Game</button>
+                </div>
+            </div>
+
+            <!-- Section: Quote Generator -->
+            <div class="section">
+                <h3>💬 Quote Nirvana</h3>
+                <p class="question-text">Inspirasi dari Kurt Cobain</p>
+                <div class="quote-container">
+                    <p id="quote-text" class="quote-text"></p>
+                    <div class="quote-buttons">
+                        <button id="new-quote-btn" class="btn btn-primary">🔄 Quote Baru</button>
+                        <button id="copy-quote-btn" class="btn btn-secondary">📋 Copy</button>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <h3>🟣 Pria Ungu</h3>
+                <p class="question-text">Apakah kamu siap untuk bertemu pria ungu?</p>
+                <button id="mulai-btn" class="btn btn-danger">Mulai</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- PAGE LIRIK -->
+    <div id="lirik" class="page">
+        <div class="content-wrapper">
+            <h2 class="main-title">Lirik Lagu</h2>
+            <div class="lirik-buttons">
+                <button id="mulut-btn" class="btn btn-primary">🎤 Dengarkan Mulut Panjang</button>
+                <button id="adam-btn" class="btn btn-primary">😎 Adam Ganteng</button>
+            </div>
+            <div class="lirik-container">
+                <p id="lirik-text" class="lirik-text"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: Pria Ungu -->
+    <div id="ungu" class="modal-ungu hidden">
+        <div class="modal-content">
+            <div class="ungu-box">
+                <p class="dancing-character">🟣</p>
+                <p class="ungu-text">PRIA UNGU HADIR!</p>
+                <button id="tutup-ungu" class="btn btn-close">Tutup</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: Edit Game Score (F2) -->
+    <div id="edit-score-modal" class="modal-edit hidden">
+        <div class="modal-edit-content">
+            <div class="edit-box">
+                <h2>Edit Score RPS (F2)</h2>
+                <p class="edit-subtitle">Ubah jumlah kemenangan permainan</p>
+                
+                <div class="edit-form">
+                    <div class="form-group">
+                        <label for="edit-user-wins">Kemenangan Anda:</label>
+                        <input type="number" id="edit-user-wins" placeholder="Masukkan jumlah" value="0" min="0">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="edit-ai-wins">Kemenangan AI:</label>
+                        <input type="number" id="edit-ai-wins" placeholder="Masukkan jumlah" value="0" min="0">
+                    </div>
+                    
+                    <div class="edit-buttons">
+                        <button id="save-score-btn" class="btn btn-primary">💾 Simpan</button>
+                        <button id="cancel-score-btn" class="btn btn-secondary">✕ Batal</button>
+                    </div>
+                </div>
+                
+                <p class="edit-info">💡 Perubahan bersifat sementara dan akan kembali ke awal jika di-refresh</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: Edit Identitas (F1) -->
+    <div id="edit-identity-modal" class="modal-edit hidden">
+        <div class="modal-edit-content">
+            <div class="edit-box">
+                <h2>Edit Identitas (F1)</h2>
+                <p class="edit-subtitle">Ubah nama Anda (sementara)</p>
+                
+                <div class="edit-form">
+                    <div class="form-group">
+                        <label for="edit-name">Nama:</label>
+                        <input type="text" id="edit-name" placeholder="Masukkan nama" value="Adam Ganteng">
+                    </div>
+                    
+                    <div class="edit-buttons">
+                        <button id="save-identity-btn" class="btn btn-primary">💾 Simpan</button>
+                        <button id="cancel-identity-btn" class="btn btn-secondary">✕ Batal</button>
+                    </div>
+                </div>
+                
+                <p class="edit-info">💡 Perubahan bersifat sementara dan akan kembali ke awal jika di-refresh</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
